@@ -3,6 +3,7 @@ $tweetTooLong = $('<div class="too-long"> Your tweet is too long</div>');
 $tweetEmpty = $('<div class="too-long"> You havnt written anything yet</div>');
 
 //----------- jquery -------------------------------------
+// function is responisble for presenting user with amount they have left to be able to send a tweet
 $(document).ready(function () {
   console.log("file loaded");
   let max_length = 140;
@@ -30,7 +31,7 @@ $(document).ready(function () {
 });
 //------------
 
-//------------  vanilla js --------------------------------
+//------------  vanilla js version of above--------------------------------
 // document.addEventListener('DOMContentLoaded', function () {
 //   let max_length = 145;
 //  let txt = document.getElementById('tweet-text');
