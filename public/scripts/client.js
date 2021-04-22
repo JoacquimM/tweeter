@@ -5,7 +5,7 @@
  */
 
 // Test / driver code (temporary). Eventually will get this from the server.
-// import { format } from "timeago.js";
+
 console.log("File loaded");
 
 const tweetData = {
@@ -97,6 +97,7 @@ const createTweetElement = function (tweet) {
   return $tweet;
 };
 //----------------------------------------------------------------
+// function below is responsible for rendering the tweets on to the page
 renderTweets(data);
 const loadTweets = () => {
   $.ajax({
@@ -107,9 +108,6 @@ const loadTweets = () => {
     // $("time.timeago").timeago();
     // console.log("response -->", response);
     renderTweets(response);
-    // const item = createItem(response[0])
-    // $('#results').empty();
-    // createItems(response);
   });
 };
 $(document).ready(function () {
