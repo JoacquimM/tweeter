@@ -2,6 +2,8 @@ $cantPost = $(
   '<div class="cant-post" style="text-align:center"> ⚠️Your tweet is too long  or you did not enter anything, please try again ⚠️</div>'
 );
 
+// function below resposible for making a post request to teh back endpoint
+// also checks as validation for user submittion, if it fails user is presented with apprprate message.
 $(document).ready(function () {
   console.log("FORM-SUBMIT.JS EXECUTED");
   $("#tweet-form").submit(function (event) {
