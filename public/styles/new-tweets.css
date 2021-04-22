@@ -1,0 +1,34 @@
+.new-tweet {
+  align-items: center;
+}
+
+/* Holds button and Number */
+.button_number {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Input Field */
+textarea[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  /* box-sizing: border-box; */
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: #f4f1ec;
+}
+
+/* Tweet Button  */
+.tweet_button {
+  font-family: "Bungee", sans-serif;
+  background-color: #4056a1;
+}
+
+.counter {
+  font-family: "Bungee", sans-serif;
+}
+
+.material-icons:hover {
+  color: red;
+}

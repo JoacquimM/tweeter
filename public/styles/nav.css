@@ -1,0 +1,28 @@
+/* NAV BAR CSS BELOW*/
+.logo {
+  display: flex;
+  height: 120px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4056a1;
+  color: #ffffff;
+  font-size: xx-large;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Twitter */
+.tweeter_text {
+  margin: 1.5em;
+  font-family: "Bungee", sans-serif;
+}
+
+/* WRITE an new tweet */
+.write_text {
+  margin: 1.5em;
+  font-size: xx-large;
+  font-family: "Source Sans Pro", sans-serif;
+}

@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -18,8 +20,144 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+/* Holds the section cotaining everything below  */
+.container {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* New tweet section  */
+/*----------------------------------------------------------------*/
+.new-tweet {
+  align-items: center;
+}
+
+/* Holds button and Number */
+.button_number {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Input Field */
+textarea[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  /* box-sizing: border-box; */
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: #f4f1ec;
+}
+
+/* Tweet Button  */
+.tweet_button {
+  font-family: "Bungee", sans-serif;
+  background-color: #4056a1;
+}
+
+.counter {
+  font-family: "Bungee", sans-serif;
+}
+
+/* ---------------------------------------------------------------- */
+
+.divider {
+  /* display: flex;
+  align-items: center; */
+  background-color: transparent;
+  border: 1px solid transparent;
+  width: 90%;
+  height: 70px;
+}
+
+/* container for tweets  */
+.tweets-container {
+  /* display: flex;
+  align-items: center; */
+  /* background-color: pink; */
+  /* border: 2px solid black;
+  width: 90%;
+  height: 200px; */
+  /* box-shadow: 10px 10px 5px grey; */
+}
+
+/* new Indiviudla tweet boxes  */
+.new-tweets-container {
+  /* display: flex;
+  align-items: center; */
+  /* background-color: pink; */
+  border: 2px solid black;
+  width: 90%;
+  height: 200px;
+  /* box-shadow: 10px 10px 5px grey; */
+}
+
+.tweet {
+  border: 2px solid black;
+  width: 900px;
+  height: 200px;
+  /* Hover effect for tweets  */
+  /* box-shadow: 10px 5px 5px black; */
+}
+
+/* Hover effct */
+/* .tweets-container:hover {
+  box-shadow: 10px 5px 5px black;
+} */
+
+.tweet:hover {
+  box-shadow: 10px 5px 5px black;
+}
+
+.boxed {
+  margin: 0.9em;
+  /* border: 1px solid black; */
+}
+hr {
+  position: relative;
+  top: 10px;
+  border: none;
+  height: 5px;
+  background: black;
+  margin-bottom: 20px;
+}
+
+.days_icons {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.9em;
+}
+
+.face_name {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  /* display: none; */
+}
+
+.padding_face_name {
+  display: flex;
+  /* justify-self: space-between; */
+  padding: 15px;
+}
+
+.at_hover:hover {
+  /* display: block; */
+}
+
+.cant-post {
+  border: 2px solid red;
+  width: 900px;
+  height: 50px;
+  color: red;
+}
