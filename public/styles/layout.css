@@ -197,3 +197,13 @@ hr {
     width: 50%;
   }
 }
+
+/* nav bar */
+@media screen and (max-width: 930) {
+  span {
+    font-size: 24px;
+  }
+  .logo {
+    height: 100%;
+  }
+}
