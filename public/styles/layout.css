@@ -12,15 +12,12 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
+  margin-top: 8em;
 }
 
 /*
@@ -30,24 +27,18 @@ body {
 /* Holds the section cotaining everything below  */
 .container {
   margin: auto;
-  width: 90%;
+  /* margin-top: 2%; */
+  width: 80%;
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-
-/* .compose-tweet {
-  text-align: center;
-} */
-
-.tweet-form {
 }
 
 /* New tweet section  */
 /*----------------------------------------------------------------*/
 .new-tweet {
   align-items: center;
-  width: 60%;
+  width: 90%;
 }
 
 /* Holds button and Number */
@@ -81,48 +72,24 @@ textarea[type="text"] {
 /* ---------------------------------------------------------------- */
 
 .divider {
-  /* display: flex;
-  align-items: center; */
   background-color: transparent;
   border: 1px solid transparent;
   width: 90%;
   height: 70px;
 }
 
-/* container for tweets  */
-.tweets-container {
-  /* display: flex;
-  align-items: center; */
-  /* background-color: pink; */
-  /* border: 2px solid black;
-  width: 90%;
-  height: 200px; */
-  /* box-shadow: 10px 10px 5px grey; */
-}
-
 /* new Indiviudla tweet boxes  */
 .new-tweets-container {
-  /* display: flex;
-  align-items: center; */
-  /* background-color: pink; */
   border: 2px solid black;
   width: 90%;
   height: 200px;
-  /* box-shadow: 10px 10px 5px grey; */
 }
 
 .tweet {
   border: 2px solid black;
   width: 100%;
   height: 200px;
-  /* Hover effect for tweets  */
-  /* box-shadow: 10px 5px 5px black; */
 }
-
-/* Hover effct */
-/* .tweets-container:hover {
-  box-shadow: 10px 5px 5px black;
-} */
 
 .tweet:hover {
   box-shadow: 10px 5px 5px black;
@@ -130,7 +97,6 @@ textarea[type="text"] {
 
 .boxed {
   margin: 0.9em;
-  /* border: 1px solid black; */
 }
 hr {
   position: relative;
@@ -151,20 +117,21 @@ hr {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  /* display: none; */
 }
 
 .padding_face_name {
   display: flex;
-  /* justify-self: space-between; */
   padding: 15px;
 }
 
-.at_hover:hover {
-  /* display: block; */
+.cant-post1 {
+  border: 2px solid red;
+  width: 100%;
+  height: 70px;
+  color: red;
+  font-size: 24px;
 }
-
-.cant-post {
+.cant-post2 {
   border: 2px solid red;
   width: 100%;
   height: 70px;
@@ -174,36 +141,84 @@ hr {
 
 /* Media querries */
 
-@media screen and (max-width: 930px) {
+/* @media screen and (max-width: 930px) {
   .tweet {
     width: 80%;
     height: 100%;
   }
-  .cant-post {
+  .cant-post1 {
     width: 80%;
     font-size: 20px;
     height: 100%;
   }
-}
-
-@media screen and (max-width: 906px) {
-  div {
+  .cant-post2 {
+    width: 80%;
     font-size: 20px;
+    height: 100%;
+  }
+} */
+
+@media screen and (max-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    /* width: 100%; */
+  }
+  .tweets-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .main_header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav.logo {
+    background-color: #cc8800;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  }
+  .tweet {
+    height: 100%;
   }
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (min-width: 1024px) {
+  .main_header {
+    display: flex;
+    margin: 20px;
+    width: 50%;
+    /* height: 500px; */
+  }
+}
+/* @media screen and (max-width: 1024px) {
+  .body {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1em;
+  }
+} */
+
+/* @media screen and (max-width: 930px) {
   .divider {
     width: 50%;
   }
 }
 
 /* nav bar */
-@media screen and (max-width: 930) {
+/* @media screen and (max-width: 930) {
   span {
     font-size: 24px;
   }
   .logo {
     height: 100%;
   }
-}
+} */

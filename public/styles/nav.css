@@ -22,7 +22,7 @@
 
 /* WRITE an new tweet */
 .write_text {
-  margin: 1.5em;
+  /* margin: 1.5em; */
   font-size: xx-large;
   font-family: "Source Sans Pro", sans-serif;
 }

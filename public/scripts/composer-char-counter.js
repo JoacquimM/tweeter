@@ -9,44 +9,22 @@ $(document).ready(function () {
   let max_length = 140;
   $("#tweet-text").keyup(function () {
     let len = max_length - $(this).val().length;
-    $(".counter").css("color", "#FF0000");
-    $(".counter").text(` ${len}`);
-
-    if (len === 140) {
+    if (len < 0) {
+      $(".counter").css("color", "#FF0000");
+      $(".counter").text(` ${len}`);
+    }
+    if (len > 0 || len === 140) {
       $(".counter").css("color", "#000000");
       $(".counter").text(`${len}`);
     }
-
     let tweetLength = $("#tweet-text").val().length;
-
     if (tweetLength > 140) {
       $(".compose-tweet").append($tweetTooLong);
       console.log($tweetTooLong);
     }
-
-    if (tweetLength === 0) {
+    if (tweetLength === 0 || tweetLength < 140) {
       $(".too-long").remove();
     }
   });
 });
 //------------
-
-//------------  vanilla js version of above--------------------------------
-// document.addEventListener('DOMContentLoaded', function () {
-//   let max_length = 145;
-//  let txt = document.getElementById('tweet-text');
-//  txt.addEventListener('keyup', function (ev){
-//     //  console.log(ev, "THIS IS WORKING")
-//     let target = ev.currentTarget;
-//     let len = max_length - this.value.length;
-//     const counter = document.querySelector('.counter')
-//     counter.style.color = '#FF0000';
-//     counter.textContent = `-${max_length - this.value.length}`
-//     if(len === 145){
-//       counter.style.color = '#000000'
-//       counter.textContent = `${max_length - this.value.length}`
-//     }
-//     console.log(len);
-
-//  })
-// })

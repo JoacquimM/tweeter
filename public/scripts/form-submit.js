@@ -1,5 +1,9 @@
-$cantPost = $(
-  '<div class="cant-post" style="text-align:center"> ⚠️Your tweet is too long  or you did not enter anything, please try again ⚠️</div>'
+//jquery variables whic contains teh html to be renedered as a result of validation of user input
+$cantPost1 = $(
+  '<div class="cant-post1" style="text-align:center"> ⚠️Your tweet is too long, please try again ⚠️</div>'
+);
+$cantPost2 = $(
+  '<div class="cant-post2" style="text-align:center"> ⚠️You did not enter anything, please try again ⚠️</div>'
 );
 
 // function below resposible for making a post request to teh back endpoint
@@ -11,14 +15,23 @@ $(document).ready(function () {
     let formValues = $("#tweet-text").val();
     console.log("formValues--->", formValues);
 
-    if (formValues === "" || formValues === null || formValues.length > 140) {
-      $(".compose-tweet").append($cantPost);
+    // renders warning - too long
+    if (formValues.length > 140) {
+      $(".compose-tweet").append($cantPost1);
+      $(".cant-post2").remove();
+      return false;
+    }
+    // renders warning - nothing entered
+    if (formValues === "" || formValues === null) {
+      $(".compose-tweet").append($cantPost2);
+      $(".cant-post1").remove();
 
       return false;
     }
-
+    // removes warnings
     if (formValues.length > 0 && formValues.length < 140) {
-      $(".cant-post").remove();
+      $(".cant-post1").remove();
+      $(".cant-post2").remove();
     }
 
     $.ajax({
@@ -31,7 +44,8 @@ $(document).ready(function () {
       loadTweets();
     });
 
-    //clear form with reset
+    //clear form with reset / resets counter
     $("#tweet-form").trigger("reset");
+    $(".counter").html("140");
   });
 });

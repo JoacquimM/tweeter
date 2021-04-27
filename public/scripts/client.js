@@ -55,9 +55,6 @@ const renderTweets = function (tweets) {
     let newTweet = createTweetElement(tweets[i]);
     $(".tweets-container").prepend(newTweet);
   }
-
-  // $(newTweet).insertAfter('.tweets-container')
-  // return newTweet;
 };
 //----------------------------------------------------------------
 const createTweetElement = function (tweet) {
@@ -105,12 +102,9 @@ const loadTweets = () => {
     method: "GET",
     dataType: "JSON",
   }).then(function (response) {
-    // $("time.timeago").timeago();
-    // console.log("response -->", response);
     renderTweets(response);
   });
 };
 $(document).ready(function () {
   loadTweets();
-  $("time.timeago").timeago();
 });
