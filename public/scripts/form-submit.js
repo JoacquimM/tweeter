@@ -31,7 +31,7 @@ $(document).ready(function () {
       $(".cant-post1").remove();
       $(".cant-post2").remove();
     }
-
+    // ajax request
     $.ajax({
       url: "/tweets",
       type: "POST",
