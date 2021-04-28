@@ -9,11 +9,9 @@ $cantPost2 = $(
 // function below resposible for making a post request to teh back endpoint
 // also checks as validation for user submittion, if it fails user is presented with apprprate message.
 $(document).ready(function () {
-  console.log("FORM-SUBMIT.JS EXECUTED");
   $("#tweet-form").submit(function (event) {
     event.preventDefault();
     let formValues = $("#tweet-text").val();
-    console.log("formValues--->", formValues);
 
     // renders warning - too long
     if (formValues.length > 140) {
@@ -44,8 +42,11 @@ $(document).ready(function () {
       loadTweets();
     });
 
-    //clear form with reset / resets counter
+    //clear form with reset / resets counter and color/ removes all warnings
     $("#tweet-form").trigger("reset");
     $(".counter").html("140");
+    $(".cant-post1").remove();
+    $(".cant-post2").remove();
+    $(".counter").css("color", "#000000");
   });
 });

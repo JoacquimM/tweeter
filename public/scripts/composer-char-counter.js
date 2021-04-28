@@ -13,16 +13,21 @@ $(document).ready(function () {
       $(".counter").css("color", "#FF0000");
       $(".counter").text(` ${len}`);
     }
+    //counter number 0
+    if (len === 0) {
+      $(".counter").css("color", "#FF0000");
+      $(".counter").text(` ${0}`);
+    }
+
     if (len > 0 || len === 140) {
       $(".counter").css("color", "#000000");
       $(".counter").text(`${len}`);
     }
+    // length of current text value
     let tweetLength = $("#tweet-text").val().length;
-    if (tweetLength > 140) {
-      $(".compose-tweet").append($tweetTooLong);
-      console.log($tweetTooLong);
-    }
+
     if (tweetLength === 0 || tweetLength < 140) {
+      //removes errors
       $(".too-long").remove();
     }
   });
